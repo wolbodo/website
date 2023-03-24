@@ -7,7 +7,10 @@
 		const res = await fetch('https://members.wolbodo.nl/auth/me', {
 			credentials: 'include'
 		});
-		user = await res.json();
+
+		if (res.ok) {
+			user = await res.json();
+		}
 	});
 </script>
 
