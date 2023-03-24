@@ -8,7 +8,7 @@ volumes:
   website-db:
 
 services:
-  frontend:
+  app:
     image: ghcr.io/wolbodo/website:main
     env_file: .env
     environment:
@@ -19,16 +19,3 @@ services:
     command: node .
     expose:
       - 80
-
-  cms:
-    image: ghcr.io/wolbodo/cms:main
-    env_file: .env
-    environment:
-      PORT: 80
-      VIRTUAL_HOST: cms.wolbodo.nl
-      CERT_NAME: wildcard
-    networks: [external, default]
-    expose:
-      - 80
-    volumes:
-      - website-db:/usr/src/app/.tmp
