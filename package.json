@@ -31,6 +31,8 @@
 	"dependencies": {
 		"@fontsource/barrio": "^4.5.8",
 		"@fontsource/baumans": "^4.5.9",
+		"@fontsource/farro": "^4.5.10",
+		"@fontsource/oswald": "^4.5.12",
 		"@sveltejs/adapter-node": "^1.2.3"
 	}
 }

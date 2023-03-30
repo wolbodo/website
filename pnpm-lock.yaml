@@ -3,6 +3,8 @@ lockfileVersion: 5.4
 specifiers:
   '@fontsource/barrio': ^4.5.8
   '@fontsource/baumans': ^4.5.9
+  '@fontsource/farro': ^4.5.10
+  '@fontsource/oswald': ^4.5.12
   '@sveltejs/adapter-auto': ^2.0.0
   '@sveltejs/adapter-node': ^1.2.3
   '@sveltejs/kit': ^1.14.0
@@ -22,6 +24,8 @@ specifiers:
 dependencies:
   '@fontsource/barrio': 4.5.8
   '@fontsource/baumans': 4.5.9
+  '@fontsource/farro': 4.5.10
+  '@fontsource/oswald': 4.5.12
   '@sveltejs/adapter-node': 1.2.3_@sveltejs+kit@1.14.0
 
 devDependencies:
@@ -261,6 +265,14 @@ packages:
 
   /@fontsource/baumans/4.5.9:
     resolution: {integrity: sha512-FWpFhQdGyIQzYiLW0UFn7RHtkBYQE0hmWpLT1eLRcyMWySvTGqfDgAtUCAb5ANoVlhS+KCu0vovftiMf85ownw==}
+    dev: false
+
+  /@fontsource/farro/4.5.10:
+    resolution: {integrity: sha512-Gp/+AnqKN/fMMX63s5JtDPBAvWxYt0QcboAl2H5+gruBS3AxYtiRKXOdBgHS5EFD4Qt3ko/4U4rNYGhRG54g0Q==}
+    dev: false
+
+  /@fontsource/oswald/4.5.12:
+    resolution: {integrity: sha512-UAduJgOpCQzf+SnuatQ7ANWRIGPD2GXh3CfvJ4YTlbhGM0bQYCwHL/5u+YFjZzidBMXspzV/k33PPxwOrmuaew==}
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:

@@ -1,0 +1,33 @@
+@import "@fontsource/barrio";
+@import "@fontsource/baumans";
+@import "@fontsource/farro";
+
+:root {
+    --accent-color: #FF81BC;
+    --action-color: #DE007B;
+    --background-color: #C1146D;
+    --black: #07000B;
+    --white: #FFFEFD;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--white);
+    font-family: "Farro";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Baumans";
+}
+
+a {
+    color: var(--white);
+    background-color: var(--action-color);
+    padding: 2px 4px;
+    border-radius: 4px;
+}

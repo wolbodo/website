@@ -7,9 +7,7 @@ export const load = (async ({ fetch }) => {
             Authorization: `Bearer ${env.PUBLIC_API_KEY}`
         }
     })
-    console.log(res.ok, res.headers)
     const posts = await res.json()
-    console.log(posts)
 
     return {
         posts
