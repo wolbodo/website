@@ -1,6 +1,6 @@
-FROM node:18
+FROM node:19-alpine
 
-RUN wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.shrc" SHELL="$(which sh)" sh -
+RUN npm install --global pnpm
 
 WORKDIR /usr/src/app
 
