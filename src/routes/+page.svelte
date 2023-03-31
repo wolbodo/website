@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Post from '$lib/Post.svelte';
 	import type { PageData } from './$types';
 	import User from '$lib/User.svelte';
 
@@ -6,23 +7,11 @@
 </script>
 
 {#each data.posts.data as post}
-	<article>
-		<h2>{post.attributes.title}</h2>
-		{#if post.attributes.createdBy}
-			<p>By {post.attributes.createdBy.firstname}</p>
-		{/if}
-
-		<p>{post.attributes.content}</p>
-	</article>
+	<Post
+		title={post.attributes.title}
+		createdBy={post.attributes.createdBy}
+		content={post.attributes.content}
+	/>
 {/each}
 
 <User />
-
-<style>
-	article {
-		color: var(--black);
-		background: var(--white);
-		margin-bottom: 1rem;
-		padding: 0.1rem 1rem;
-	}
-</style>

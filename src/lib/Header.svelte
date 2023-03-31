@@ -5,18 +5,18 @@
 
 	<nav>
 		<ul>
-			<li>
+			<!-- <li>
 				<a href="/events">Events</a>
-			</li>
+			</li> -->
 			<li>
 				<a href="/about">About</a>
 			</li>
 			<li>
-				<a href="/contact">Contact</a>
+				<a href="/zaalverhuur">Zaalverhuur</a>
 			</li>
 
 			<li class="end">
-				<a href="/login">Login</a>
+				<a href="/leden">Leden</a>
 			</li>
 		</ul>
 	</nav>
@@ -43,7 +43,7 @@
 	}
 	nav ul {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(5rem, 10rem));
+		grid-template-columns: repeat(auto-fit, minmax(5rem, auto));
 		align-content: end;
 
 		padding: 0;
