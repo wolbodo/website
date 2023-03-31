@@ -7,6 +7,6 @@ WORKDIR /usr/src/app
 COPY package.json ./
 COPY pnpm-lock.yaml ./
 
-RUN pnpm install --frozen-lockfile --prod
+RUN pnpm install --prod
 
 COPY build /usr/src/app
