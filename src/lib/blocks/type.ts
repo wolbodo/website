@@ -4,43 +4,43 @@ export type BaseBlock<name, data> = {
     data: data
 }
 
-type Header = BaseBlock<'header', {
+export type Header = BaseBlock<'header', {
     level: number;
     text: string;
 }>
-type Paragraph = BaseBlock<'paragraph', {
+export type Paragraph = BaseBlock<'paragraph', {
     text: string;
 }>
-type Table = BaseBlock<'table', {
+export type Table = BaseBlock<'table', {
     withHeadings: boolean;
     content: string[][];
 }>
-type List = BaseBlock<'list', {
+export type List = BaseBlock<'list', {
     style: 'ordered' | 'unordered';
     items: string[];
 }>
-type Warning = BaseBlock<'warning', {
+export type Warning = BaseBlock<'warning', {
     title: string;
     message: string;
 }>
-type Code = BaseBlock<'code', {
+export type Code = BaseBlock<'code', {
     code: string;
 }>
-type Raw = BaseBlock<'raw', {
+export type Raw = BaseBlock<'raw', {
     html: string;
 }>
-type Quote = BaseBlock<'quote', {
+export type Quote = BaseBlock<'quote', {
     text: string;
     caption: string
     alignment: 'left' | 'center'
 }>
-type Checklist = BaseBlock<'checklist', {
+export type Checklist = BaseBlock<'checklist', {
     items: {
         text: string;
         checked: boolean;
     }[]
 }>
-type Delimiter = BaseBlock<'delimiter', {}>
+export type Delimiter = BaseBlock<'delimiter', {}>
 
 export type Block = Header | Paragraph | Table | List | Warning | Code | Raw | Quote | Checklist | Delimiter
 

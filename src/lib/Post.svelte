@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Blocks } from './type';
-	import Block from './Block.svelte';
+	import type { Blocks } from './blocks/type';
+	import Block from './blocks/Block.svelte';
 	export let title: String;
 	export let createdBy: {
 		firstname: string;
