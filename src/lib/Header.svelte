@@ -14,11 +14,8 @@
 			<li>
 				<a href="/zaalverhuur">Zaalverhuur</a>
 			</li>
-
-			<li class="end">
-				<a href="/leden">Leden</a>
-			</li>
 		</ul>
+		<a class="members" href="/leden">Leden</a>
 	</nav>
 </header>
 
@@ -40,19 +37,31 @@
 	nav {
 		flex: 1;
 		margin: 1rem;
+
+		display: grid;
+
+		grid-template-columns: auto 5rem;
+		align-content: baseline;
 	}
 	nav ul {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(5rem, auto));
-		align-content: end;
+		justify-content: start;
 
 		padding: 0;
 		margin: 0;
 		list-style: none;
-		font-size: 1.5rem;
+		font-size: 1rem;
 	}
-	li.end {
-		align-self: auto;
+	.members {
+		background: var(--detail-color);
+		border-top-left-radius: 1rem;
+		border-bottom-left-radius: 1rem;
+		margin-right: calc(-1rem - 8px);
+		text-align: center;
+		line-height: 49px;
+
+		text-decoration: none;
 	}
 	nav li {
 		margin: 0.5rem;
@@ -62,5 +71,11 @@
 		padding: 0.5rem;
 		text-align: center;
 		text-decoration: none;
+		background: var(--background-color);
+	}
+	nav a:focus,
+	nav a:hover {
+		transition: background-color 0.3s ease-out;
+		background: var(--action-color);
 	}
 </style>

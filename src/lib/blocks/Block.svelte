@@ -8,6 +8,7 @@
 	import Quote from './Quote.svelte';
 	import Raw from './Raw.svelte';
 	import Table from './Table.svelte';
+	import Image from './Image.svelte';
 	import {
 		type Block,
 		isHeader,
@@ -19,7 +20,8 @@
 		isRaw,
 		isQuote,
 		isChecklist,
-		isDelimiter
+		isDelimiter,
+		isImage
 	} from './type';
 	import Warning from './Warning.svelte';
 
@@ -45,7 +47,9 @@
 {:else if isChecklist(block)}
 	<Checklist {...block} />
 {:else if isDelimiter(block)}
-	<Delimiter {...block} />
+	<Delimiter />
+{:else if isImage(block)}
+	<Image {...block} />
 {:else}
 	<section>
 		<h3>Block '{block.type}' not implemented</h3>

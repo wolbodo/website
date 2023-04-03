@@ -15,7 +15,7 @@ export const load = (async ({ fetch }) => {
     const { data } = await res.json()
 
     return {
-        content
+        content: data
     };
 
 }) satisfies PageLoad;

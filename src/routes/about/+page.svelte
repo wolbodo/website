@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Block from '$lib/Block.svelte';
+	import Block from '$lib/blocks/Block.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;

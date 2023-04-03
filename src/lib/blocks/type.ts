@@ -41,8 +41,33 @@ export type Checklist = BaseBlock<'checklist', {
     }[]
 }>
 export type Delimiter = BaseBlock<'delimiter', {}>
+export type Image = BaseBlock<'image', {
+    file: {
+        url: string;
+        mime: string;
+        height: number;
+        width: number;
+        size: number;
+        alt: string,
+        formats: Record<'thumbnail' | 'small' | 'medium' | 'large', {
+            ext: string;
+            url: string;
+            hash: string;
+            mime: string;
+            name: string;
+            path?: string;
+            size: number;
+            width: number;
+            height: number;
+        }>;
+    };
+    caption: string;
+    withBorder: boolean;
+    stretched: boolean;
+    withBackground: boolean;
+}>
 
-export type Block = Header | Paragraph | Table | List | Warning | Code | Raw | Quote | Checklist | Delimiter
+export type Block = Header | Paragraph | Table | List | Warning | Code | Raw | Quote | Checklist | Delimiter | Image
 
 export const isHeader = (block: Block): block is Header => block.type === 'header'
 export const isParagraph = (block: Block): block is Paragraph => block.type === 'paragraph'
@@ -54,6 +79,7 @@ export const isRaw = (block: Block): block is Raw => block.type === 'raw'
 export const isQuote = (block: Block): block is Quote => block.type === 'quote'
 export const isChecklist = (block: Block): block is Checklist => block.type === 'checklist'
 export const isDelimiter = (block: Block): block is Delimiter => block.type === 'delimiter'
+export const isImage = (block: Block): block is Image => block.type === 'image'
 
 export type Blocks = {
     time: number;

@@ -1,7 +1,3 @@
-<script lang="ts">
-	import type { PageData } from './$types';
-</script>
-
 <article>
 	<h1>Leden</h1>
 
